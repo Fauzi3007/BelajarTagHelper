@@ -1,7 +1,7 @@
 using BelajarTagHelper.Models;
 using Microsoft.AspNetCore.Mvc;
 
-namespace TagHelpersDemo.Controllers
+namespace BelajarTagHelper.Controllers
 {
     public class HomeController : Controller
     {
@@ -11,10 +11,30 @@ namespace TagHelpersDemo.Controllers
 
             listStudents = new List<Student>()
             {
-               new Student() { StudentId = 101, Name = "James", Branch = Branch.CSE, Gender = Gender.Male, Address = "A1-2018", Email = "James@g.com" },
-               new Student() { StudentId = 102, Name = "Priyanka", Branch = Branch.ETC, Gender = Gender.Female, Address = "A1-2019", Email = "Priyanka@g.com" },
-               new Student() { StudentId = 103, Name = "David", Branch = Branch.CSE, Gender = Gender.Male, Address = "A1-2020", Email = "David@g.com" },
-               new Student() { StudentId = 104, Name = "Pranaya", Branch = Branch.Mech, Gender = Gender.Male, Address = "A1-2021", Email = "Pranaya@g.com" }
+              new Student
+            {
+                StudentId = 1, FullName = "Pranaya Rout", Password = "Password123!",
+                DateOfBirth = new DateTime(1990, 1, 1), Gender = Gender.Male, Address = "Test Address 1234",
+                Branch = Branch.CSE, TermsAndConditions = true,
+                Hobbies = new List<string> { "Reading", "Traveling" },
+                Skills = new List<string> { "C#", "SQL" }
+            },
+            new Student
+            {
+                StudentId = 2, FullName = "Hina Sharma", Password = "Password123!",
+                DateOfBirth = new DateTime(1992, 2, 15), Gender = Gender.Female, Address = "Test Address 1234",
+                Branch = Branch.ETC, TermsAndConditions = true,
+                Hobbies = new List<string> { "Music", "Traveling" },
+                Skills = new List<string> { "Python", "Machine Learning" }
+            },
+            new Student
+            {
+                StudentId = 3, FullName = "Anurag Mohanty", Password = "Password123!",
+                DateOfBirth = new DateTime(1988, 11, 23), Gender = Gender.Male, Address = "Test Address 1234",
+                Branch = Branch.Mechanical, TermsAndConditions = true,
+                Hobbies = new List<string> { "Reading", "Music" },
+                Skills = new List<string> { "ASP.NET Core", "Oracle" }
+            }
             };
         }
         public ViewResult Index()

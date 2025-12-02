@@ -2,9 +2,9 @@
 {
     public enum Branch
     {
-        None,
-        CSE,
         ETC,
-        Mech
+        CSE,
+        Electrical,
+        Mechanical
     }
 }
